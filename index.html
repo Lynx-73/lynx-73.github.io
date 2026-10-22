@@ -3,14 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lynx 的联系方式</title>
+  <title>Lynx 的主页</title>
   <style>
-    body { font-family: sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
-    .card { background: #fff; border-radius: 10px; padding: 20px; max-width: 400px; margin: 0 auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    h1 { font-size: 24px; margin-bottom: 10px; }
-    p { line-height: 1.6; margin-bottom: 15px; }
-    .label { font-weight: bold; color: #555; }
-    a { color: #0366d6; text-decoration: none; }
+    /* 渐变背景，看起来更现代 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    /* 悬浮卡片设计 */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: float 6s ease-in-out infinite;
+    }
+    /* 简单的上下浮动动画 */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    /* 名字样式 */
+    h1 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      color: #333;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    /* 邮箱按钮样式 */
+    .email-btn {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      word-break: break-all;
+    }
+    .email-btn:hover {
+      background: #5a6fd6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
   </style>
 </head>
 <body>
@@ -18,10 +71,9 @@
     <h1>你好，我是 Lynx</h1>
     <p>谢谢你们浏览我的网页！</p>
     
-    <p>
-      <span class="label">联系邮箱：</span><br>
-      <a href="mailto:asdf3_ueogjdwpzs@aka.yeah.net">asdf3_ueogjdwpzs@aka.yeah.net</a>
-    </p>
+    <a href="mailto:asdf3_ueogjdwpzs@aka.yeah.net" class="email-btn">
+      ✉️ 点击给我发邮件
+    </a>
   </div>
 </body>
 </html>
